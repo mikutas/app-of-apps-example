@@ -12,7 +12,7 @@ spec:
     - CreateNamespace=false
   source:
     repoURL: https://github.com/mikutas/app-of-apps-with-helm-experiment
-    path: helm/fuga
+    path: helm/hoge
     targetRevision: {{ .Values.hoge.targetRevision }}
     helm:
       values: |
