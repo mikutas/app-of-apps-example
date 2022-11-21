@@ -13,3 +13,15 @@ argocd-uninstall:
 
 clean:
 	kind delete cluster
+
+appset-dev:
+	kustomize build appsets/overlays/development/
+
+appset-prod:
+	kustomize build appsets/overlays/production/
+
+deploy-dev:
+	kustomize build appsets/overlays/development/ | kubectl apply -f -
+
+deploy-prod:
+	kustomize build appsets/overlays/production/ | kubectl apply -f -

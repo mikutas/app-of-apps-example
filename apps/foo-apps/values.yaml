@@ -1,5 +1,7 @@
 hoge:
   targetRevision: HEAD
+  fullnameOverride: ""
 
 fuga:
   targetRevision: HEAD
+  fullnameOverride: ""

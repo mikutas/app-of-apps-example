@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: test
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/mikutas/app-of-apps-with-helm-experiment
+      revision: main
+      directories:
+      - path: apps/*
+  template:
+    spec:
+      source:
+        targetRevision: main
+        helm:
+          valueFiles:
+          - values/development.values.yaml
