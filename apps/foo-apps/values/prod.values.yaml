@@ -1,0 +1,5 @@
+hoge:
+  targetRevision: main
+
+fuga:
+  targetRevision: main
