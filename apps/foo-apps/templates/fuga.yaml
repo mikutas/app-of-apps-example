@@ -15,5 +15,5 @@ spec:
     path: helm/fuga
     targetRevision: {{ .Values.fuga.targetRevision }}
     helm:
-      values:
+      values: |
         fullnameOverride: {{ .Values.fuga.fullnameOverride }}
