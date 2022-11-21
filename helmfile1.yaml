@@ -1,5 +1,0 @@
-releases:
-- chart: parent1
-  cleanupOnFail: false
-  name: parent1
-  namespace: argocd
