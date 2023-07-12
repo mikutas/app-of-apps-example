@@ -1,1 +1,1 @@
-# app-of-apps-with-helm-experiment
+# app-of-apps-example

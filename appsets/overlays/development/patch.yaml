@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/mikutas/app-of-apps-with-helm-experiment
+      repoURL: https://github.com/mikutas/app-of-apps-example
       revision: main
       directories:
       - path: apps/*
