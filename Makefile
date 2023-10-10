@@ -2,14 +2,14 @@ cluster:
 	kind create cluster || true
 
 argocd: cluster
-	kubectl create namespace argocd || true
-	kustomize build . | kubectl apply -n argocd -f -
+	kubectl create namespace argo-cd || true
+	kustomize build . | kubectl apply -n argo-cd -f -
 
 password:
-	@kubectl view-secret argocd-initial-admin-secret -n argocd --quiet
+	@kubectl view-secret argocd-initial-admin-secret -n argo-cd --quiet
 
 argocd-uninstall:
-	kubectl delete namespace argocd
+	kubectl delete namespace argo-cd
 
 clean:
 	kind delete cluster
