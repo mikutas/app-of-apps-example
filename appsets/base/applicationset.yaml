@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: test
-  namespace: argo-cd
+  namespace: argocd
 spec:
   generators:
   - git:
@@ -24,7 +24,7 @@ spec:
           - values.yaml
       destination:
         server: https://kubernetes.default.svc
-        namespace: argo-cd
+        namespace: argocd
       syncPolicy:
         syncOptions:
         - CreateNamespace=false
